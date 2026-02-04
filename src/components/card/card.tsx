@@ -1,12 +1,13 @@
-import { FunctionComponent, PropsWithChildren } from 'react';
+import React from 'react';
 import './card.css'
 
 type CardProps = {
   title: string;
   isReversed: boolean;
+  children: React.ReactElement
 }
 
-const Card: FunctionComponent<PropsWithChildren<CardProps>> = ({ title, isReversed, children }) => {
+export default function Card ({ title, isReversed, children }: CardProps)  {
   let cardClass = "card w-100"
   if (isReversed) {
     cardClass += ' card-reversed';
@@ -20,5 +21,3 @@ const Card: FunctionComponent<PropsWithChildren<CardProps>> = ({ title, isRevers
     </div>
   );
 }
-
-export default Card;
