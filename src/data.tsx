@@ -30,16 +30,16 @@ const projectsDescription = <span>Under Construction</span>
 const techsList = [
   { tech: <ReactLogoItem key="React1" />, name: 'React' },
   { tech: <AngularLogoItem key="Angular" />, name: 'Angular' },
-  { tech: <DockerLogoItem key="Docker" />, name: 'Docker' },
   { tech: <TypescriptLogoItem key="Typescript" />, name: 'Typescript' },
+  { tech: <JavascriptLogoItem key="JavaScript" />, name: 'JavaScript' },
+  { tech: <HtmlLogoItem key="HTML" />, name: 'HTML' },
+  { tech: <CssLogoItem key="CSS" />, name: 'CSS' },
+  { tech: <DockerLogoItem key="Docker" />, name: 'Docker' },
   { tech: <NodeJsLogoItem key="NodeJs" />, name: 'NodeJs' },
   { tech: <ExpressLogoItem key="Express" />, name: 'Express' },
   { tech: <SvelteKitLogoItem key="SvelteKit" />, name: 'SvelteKit' },
-  { tech: <JavascriptLogoItem key="JavaScript" />, name: 'JavaScript' },
   { tech: <NestJSLogoItem key="NestJS" />, name: 'NestJS' },
   { tech: <PostgresLogoItem key="PostgreSQL" />, name: 'PostgreSQL' },
-  { tech: <HtmlLogoItem key="HTML" />, name: 'HTML' },
-  { tech: <CssLogoItem key="CSS" />, name: 'CSS' },
   { tech: <GithubLogoItem key="GitHub" />, name: 'GitHub' },
 
 ]
