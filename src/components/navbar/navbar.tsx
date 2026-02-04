@@ -3,7 +3,7 @@ import { FunctionComponent, PropsWithChildren } from 'react';
 const NavBar: FunctionComponent<PropsWithChildren> = () => {
  return (
   <>
-    <span>Header</span>
+    <span>Header placeholder</span>
   </>
  );
 }

@@ -1,4 +1,16 @@
+import AngularLogoItem from './components/tech-items/angular-logo'
+import CssLogoItem from './components/tech-items/css-logo'
+import DockerLogoItem from './components/tech-items/docker-logo'
+import ExpressLogoItem from './components/tech-items/express-logo'
+import GithubLogoItem from './components/tech-items/github-logo'
+import HtmlLogoItem from './components/tech-items/html-logo'
+import JavascriptLogoItem from './components/tech-items/javascript-logo'
+import NestJSLogoItem from './components/tech-items/nestjs-logo'
+import NodeJsLogoItem from './components/tech-items/nodejs-logo'
+import PostgresLogoItem from './components/tech-items/postgres-logo'
 import ReactLogoItem from './components/tech-items/react-logo'
+import SvelteKitLogoItem from './components/tech-items/sveltekit-logo'
+import TypescriptLogoItem from './components/tech-items/typescript-logo'
 
 export const getProfileData = () => {
   return { 
@@ -17,8 +29,19 @@ const projectsDescription = <span>Under Construction</span>
 
 const techsList = [
   { tech: <ReactLogoItem key="React1" />, name: 'React' },
-  { tech: <ReactLogoItem key="React2" />, name: 'React' },
-  { tech: <ReactLogoItem key="React3" />, name: 'React' },
+  { tech: <AngularLogoItem key="Angular" />, name: 'Angular' },
+  { tech: <DockerLogoItem key="Docker" />, name: 'Docker' },
+  { tech: <TypescriptLogoItem key="Typescript" />, name: 'Typescript' },
+  { tech: <NodeJsLogoItem key="NodeJs" />, name: 'NodeJs' },
+  { tech: <ExpressLogoItem key="Express" />, name: 'Express' },
+  { tech: <SvelteKitLogoItem key="SvelteKit" />, name: 'SvelteKit' },
+  { tech: <JavascriptLogoItem key="JavaScript" />, name: 'JavaScript' },
+  { tech: <NestJSLogoItem key="NestJS" />, name: 'NestJS' },
+  { tech: <PostgresLogoItem key="PostgreSQL" />, name: 'PostgreSQL' },
+  { tech: <HtmlLogoItem key="HTML" />, name: 'HTML' },
+  { tech: <CssLogoItem key="CSS" />, name: 'CSS' },
+  { tech: <GithubLogoItem key="GitHub" />, name: 'GitHub' },
+
 ]
 
 const contactMeDescription = <span>Under Construction</span>

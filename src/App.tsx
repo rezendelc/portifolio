@@ -33,11 +33,11 @@ function App() {
           {projectsDescription}
         </Card>
         
-        <Card title={'Stacks (Under construction)'} isReversed={true}>
-          <div className='flex justify-end'>
+        <Card title={'Stacks'} isReversed={true}>
+          <div className='flex flex-wrap justify-end gap-12'>
             {techsList.map(item => {
               return (
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center gap-3">
                   { item.tech }
                   <span>{item.name}</span>
                 </div>
