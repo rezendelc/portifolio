@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Phone, Github } from "feather-icons-react";
+import { Mail, Linkedin, Github } from "feather-icons-react";
 
 export default function ContactMe() {
   const iconsSize = '32'

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import Card from './components/card/card'
 import ContactMe from './components/contact-me/contact-me';
@@ -14,9 +14,11 @@ function App() {
   const {
     githubProfilePicture,
     aboutMeDescription,
-    projectsDescription,
+    // projectsDescription,
     techsList,
   } = getProfileData();
+
+
 
   function handleNavBarClick(item: string) {
     // TODO: change this to dynamic values
