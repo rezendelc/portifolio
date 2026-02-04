@@ -6,6 +6,7 @@
   --dark-blue: #0F172A;
   --light-blue: #2E4D8E;
   --color: #F9FAFB;
+  --middle-blue: #243c70;
 }
 
 body {
@@ -35,4 +36,12 @@ h1 {
 
 span {
   font-size: 16px;
+}
+
+@media (max-width: 800px) {
+  .mobile-view {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
 }

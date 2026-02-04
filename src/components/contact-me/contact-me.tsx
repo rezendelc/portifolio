@@ -3,7 +3,7 @@ import { Mail, Linkedin, Phone, Github } from "feather-icons-react";
 export default function ContactMe() {
   const iconsSize = '32'
   return (
-    <div className='flex justify-end gap-24'>
+    <div className='flex justify-end gap-24 flex-wrap mobile-view'>
       <a className='flex items-center gap-3'
         href="mailto:lucas@lcrezende.dev.br"
       >

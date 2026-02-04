@@ -8,7 +8,7 @@ type CardProps = {
 }
 
 export default function Card ({ title, isReversed, children }: CardProps)  {
-  let cardClass = "card w-100"
+  let cardClass = "card w-100 "
   if (isReversed) {
     cardClass += ' card-reversed';
   } else {

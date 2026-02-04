@@ -15,17 +15,19 @@ function App() {
     techsList,
   } = getProfileData();
 
+  function handleNavBarClick(item: string) {
+    console.log('clicked: ' + item)
+  }
+
   return (
     <div className="App">
       <header>
-        <NavBar>
-
-        </NavBar>
+        <NavBar onClick={handleNavBarClick} />
       </header>
 
-      <main className="flex flex-col gap-16 p-16">
-        <div className="flex items-center">
-          <img src={githubProfilePicture} alt="Lucas Castro de Rezende" className="avatar"/>
+      <main className="flex flex-col gap-16 px-16 mb-8">
+        <div className="flex items-center justify-center mobile-view">
+          <img src={githubProfilePicture} alt="Lucas Castro de Rezende" className="avatar my-6"/>
           <Card title={'About me'} isReversed={true}>
             {aboutMeDescription}
           </Card>
@@ -40,7 +42,7 @@ function App() {
           <div className='flex flex-wrap gap-12'>
             {techsList.map(item => {
               return (
-                <div className="flex flex-col items-center gap-3">
+                <div className="flex flex-col items-center gap-3 w-[3em]" key={item.name}>
                   { item.tech }
                   <span>{item.name}</span>
                 </div>
