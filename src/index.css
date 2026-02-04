@@ -43,6 +43,12 @@ header {
   top: 0;
   background-color: var(--dark-blue);
   width: 100vw;
+  z-index: 100;
+}
+
+.pulse {
+  animation-duration: 1s;
+  animation-name: pulse;
 }
 
 @media (max-width: 800px) {
@@ -57,5 +63,19 @@ header {
 
   h1 {
     font-size: 16px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

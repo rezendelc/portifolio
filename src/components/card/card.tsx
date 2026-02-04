@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './card.css'
 
 type CardProps = {
   title: string;
   isReversed: boolean;
+  pulse: boolean,
+  onPulseEnd: Function,
   children: React.ReactElement
 }
 
-export default function Card ({ title, isReversed, children }: CardProps)  {
+export default function Card ({ title, isReversed, pulse, onPulseEnd, children }: CardProps)  {
   let cardClass = "card w-100 "
 
-  if (isReversed) {
-    cardClass += ' card-reversed';
-  } else {
-    cardClass += ' card-default';
-  }
+  isReversed
+  ? cardClass += ' card-reversed '
+  : cardClass += ' card-default '
+
+  if (pulse) cardClass += ' pulse '
 
   return (
     <div className={cardClass}>
