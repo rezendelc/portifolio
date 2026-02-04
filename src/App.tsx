@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import './App.css';
 import Card from './components/card/card'
 import ContactMe from './components/contact-me/contact-me';
@@ -8,6 +9,8 @@ import { getProfileData } from './data'
 // TODO: make reversed card design automatically
 
 function App() {
+  const ref = useRef(null);
+
   const {
     githubProfilePicture,
     aboutMeDescription,
@@ -16,44 +19,61 @@ function App() {
   } = getProfileData();
 
   function handleNavBarClick(item: string) {
-    console.log('clicked: ' + item)
+    // TODO: change this to dynamic values
+    const element = document.getElementById(item);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      const headerOffset = 88;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    
+      window.scrollTo({
+           top: offsetPosition,
+           behavior: "smooth"
+      });
+    }
   }
 
   return (
-    <div className="App">
+    <div className="App" id='home'>
       <header>
         <NavBar onClick={handleNavBarClick} />
       </header>
 
       <main className="flex flex-col gap-16 px-16 mb-8">
-        <div className="flex items-center justify-center mobile-view">
+        <section className="flex items-center justify-center mobile-view">
           <img src={githubProfilePicture} alt="Lucas Castro de Rezende" className="avatar my-6"/>
           <Card title={'About me'} isReversed={true}>
             {aboutMeDescription}
           </Card>
-        </div>
+        </section>
         
+        {/* <div id='projects'>
+          <Card title={'Projects (Under construction)'} isReversed={false}>
+            {projectsDescription}
+          </Card>
+        </div> */}
         
-        {/* <Card title={'Projects (Under construction)'} isReversed={false}>
-          {projectsDescription}
-        </Card> */}
-        
-        <Card title={'Stacks'} isReversed={false}>
-          <div className='flex flex-wrap gap-12'>
-            {techsList.map(item => {
-              return (
-                <div className="flex flex-col items-center gap-3 w-[3em]" key={item.name}>
-                  { item.tech }
-                  <span>{item.name}</span>
-                </div>
-              );
-            })}
-          </div>
-        </Card>
+        <section id='stacks'>
+          <Card title={'Stacks'} isReversed={false} >
+            <div className='flex flex-wrap gap-12 mobile-view'>
+              {techsList.map(item => {
+                return (
+                  <div className="flex flex-col items-center gap-3 w-[3em]" key={item.name}>
+                    { item.tech }
+                    <span>{item.name}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </Card>
+        </section>
 
-        <Card title={'Contact Me'} isReversed={true}>
-          <ContactMe />
-        </Card>
+        <section id='contactMe'>
+          <Card title={'Contact Me'} isReversed={true}>
+            <ContactMe />
+          </Card>
+        </section>
       </main>
     </div>
   );
