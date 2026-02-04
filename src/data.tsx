@@ -18,7 +18,6 @@ export const getProfileData = () => {
     aboutMeDescription,
     projectsDescription,
     techsList,
-    contactMeDescription,
   }
 }
 
@@ -44,4 +43,3 @@ const techsList = [
 
 ]
 
-const contactMeDescription = <span>Under Construction</span>

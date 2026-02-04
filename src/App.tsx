@@ -1,7 +1,11 @@
 import './App.css';
 import Card from './components/card/card'
+import ContactMe from './components/contact-me/contact-me';
 import NavBar from './components/navbar/navbar';
 import { getProfileData } from './data'
+
+
+// TODO: make reversed card design automatically
 
 function App() {
   const {
@@ -9,7 +13,6 @@ function App() {
     aboutMeDescription,
     projectsDescription,
     techsList,
-    contactMeDescription,
   } = getProfileData();
 
   return (
@@ -29,12 +32,12 @@ function App() {
         </div>
         
         
-        <Card title={'Projects (Under construction)'} isReversed={false}>
+        {/* <Card title={'Projects (Under construction)'} isReversed={false}>
           {projectsDescription}
-        </Card>
+        </Card> */}
         
-        <Card title={'Stacks'} isReversed={true}>
-          <div className='flex flex-wrap justify-end gap-12'>
+        <Card title={'Stacks'} isReversed={false}>
+          <div className='flex flex-wrap gap-12'>
             {techsList.map(item => {
               return (
                 <div className="flex flex-col items-center gap-3">
@@ -46,8 +49,8 @@ function App() {
           </div>
         </Card>
 
-        <Card title={'Contact Me (Under construction)'} isReversed={false}>
-          {contactMeDescription}
+        <Card title={'Contact Me'} isReversed={true}>
+          <ContactMe />
         </Card>
       </main>
     </div>
