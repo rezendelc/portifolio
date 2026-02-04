@@ -2,7 +2,7 @@ import './tech-item.css'
 
 export default function NodeJsLogoItem () {
   return (
-    <svg className='icon-size' fill="var(--color)"  version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512" >
+    <svg className='icon-size' fill="var(--color)"  version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" >
       <g id="5151e0c8492e5103c096af88a51f17e3">
       <path display="inline" d="M482.585,147.869v216.113c0,14.025-7.546,27.084-19.672,34.143L275.665,506.241
           c-5.989,3.474-12.782,5.259-19.719,5.259c-6.838,0-13.649-1.785-19.639-5.259l-62.521-36.99c-9.326-5.207-4.775-7.059-1.692-8.128
