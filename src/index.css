@@ -1,4 +1,6 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --dark-blue: #0F172A;
@@ -34,7 +36,7 @@ span {
   font-size: 24px;
 }
 
-.d-flex {
+/* .d-flex {
   display: flex;
   
 }
@@ -58,3 +60,5 @@ span {
 .w-100 {
   width: 100%;
 }
+
+*/

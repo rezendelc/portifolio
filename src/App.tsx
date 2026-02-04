@@ -20,33 +20,35 @@ function App() {
         </NavBar>
       </header>
 
-      <main className="p-32">
-        <div className="d-flex w-100 my-64">
-          <img src={githubProfilePicture} alt="Lucas Castro de Rezende" className="avatar m-32"/>
+      <main className="flex flex-col gap-16 p-16">
+        <div className="flex items-center">
+          <img src={githubProfilePicture} alt="Lucas Castro de Rezende" className="avatar"/>
           <Card title={'About me'} isReversed={true}>
             {aboutMeDescription}
           </Card>
         </div>
         
-        <div className="d-flex w-100 my-64">
-          <Card title={'Projects (Under construction)'} isReversed={false}>
-            {projectsDescription}
-          </Card>
-        </div>
+        
+        <Card title={'Projects (Under construction)'} isReversed={false}>
+          {projectsDescription}
+        </Card>
+        
+        <Card title={'Stacks (Under construction)'} isReversed={true}>
+          <div className='flex justify-end'>
+            {techsList.map(item => {
+              return (
+                <div className="flex flex-col items-center">
+                  { item.tech }
+                  <span>{item.name}</span>
+                </div>
+              );
+            })}
+          </div>
+        </Card>
 
-        <div className="d-flex w-100 my-64">
-          <Card title={'Stacks (Under construction)'} isReversed={true}>
-            <div className='d-flex'>
-              { techsList }
-            </div>
-          </Card>
-        </div>
-
-        <div className="d-flex w-100 my-64">
-          <Card title={'Contact Me (Under construction)'} isReversed={false}>
-            {contactMeDescription}
-          </Card>
-        </div>
+        <Card title={'Contact Me (Under construction)'} isReversed={false}>
+          {contactMeDescription}
+        </Card>
       </main>
     </div>
   );

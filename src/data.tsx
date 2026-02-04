@@ -16,7 +16,9 @@ const aboutMeDescription = <span>Full Stack Developer with a strong front-end ba
 const projectsDescription = <span>Under Construction</span>
 
 const techsList = [
-  <ReactLogoItem />,
+  { tech: <ReactLogoItem key="React1" />, name: 'React' },
+  { tech: <ReactLogoItem key="React2" />, name: 'React' },
+  { tech: <ReactLogoItem key="React3" />, name: 'React' },
 ]
 
 const contactMeDescription = <span>Under Construction</span>
